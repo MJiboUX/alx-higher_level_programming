@@ -11,7 +11,7 @@ def main(*argv):
         print("{:d} arguments".format(arguments))
     for args in sys.argv:
         if (add != 0):
-            print("{}: {}".format(add, args))
+            print("{}".format(int(args[add])))
         add += 1
 if __name__ == "__main__":
     main()
