@@ -5,4 +5,4 @@ if __name__ == '__main__':
         print('0 arguments.')
     else:
         print ('{} arguments'.format(len(sys.argv) - 1))
-        print ('{:c}'.format(enumerate(sys.argv)))
+        print ('{:c}'.format(str(sys.argv)))
