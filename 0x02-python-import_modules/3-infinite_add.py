@@ -13,5 +13,6 @@ def main(*argv):
         if (add != 0):
             sum += arguments[args]
             print("{}".format(sum)
+        sum += 1
         if __name__ == "__main__":
     main()
