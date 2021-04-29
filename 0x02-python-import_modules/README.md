@@ -1,6 +1,6 @@
 # 0x02. Python - import & modules
 ## General
- Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :)) /n
+ ** Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
  How to import functions from another file
  How to use imported functions
  How to create a module
