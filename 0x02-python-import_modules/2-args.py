@@ -6,5 +6,4 @@ if __name__ == '__main__':
     if len(sys.argv) is 1:
         print('0 arguments.')
     else:
-        while (arguments >= position):
-            print('{:d}: {:s}'.format(position, sys.argv[position]))
+        print('{:d}: {:s}'.format(position, sys.argv[position]))
