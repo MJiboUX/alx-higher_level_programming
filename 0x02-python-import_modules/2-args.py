@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-def main(*argv)
+def main(*argv):
     arguments = len(sys.argv) - 1
     position = 0
     if arguments == 1:
