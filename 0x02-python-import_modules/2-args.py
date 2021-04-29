@@ -2,8 +2,6 @@
 import sys
 
 
-
-
 def main(*argv):
     arguments = len(sys.argv) - 1
     position = 0
@@ -17,7 +15,6 @@ def main(*argv):
         if (position != 0):
             print("{}: {}".format(position, args))
         position += 1
-        
         
 if __name__ == "__main__":
     main()
