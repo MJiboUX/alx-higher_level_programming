@@ -10,9 +10,9 @@ def main(*argv):
     else:
         print("{:d} arguments".format(arguments))
     for args in sys.argv:
-        if (add != 0):
-            sum += arguments[args]
-            print("{}".format(sum)
-        sum += 1
-        if __name__ == "__main__":
+            if args != sys.argv[0]:
+                sum = sum + int(args)
+    print(sum)
+
+if __name__ == "__main__":
     main()
