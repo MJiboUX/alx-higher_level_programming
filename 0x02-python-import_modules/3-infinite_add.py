@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 import sys
+
+
 def main(*argv):
-    
-    
     arguments = len(sys.argv)
     sum = 0
     if arguments > 1:
