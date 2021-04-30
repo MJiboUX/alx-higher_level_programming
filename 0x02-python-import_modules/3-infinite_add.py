@@ -3,7 +3,7 @@ import sys
 def main(*argv):
     
     
-    arguments = len(sys.argv) - 1
+    arguments = len(sys.argv)
     sum = 0
     if arguments > 1:
         for args in sys.argv:
