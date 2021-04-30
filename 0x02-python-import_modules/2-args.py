@@ -14,6 +14,6 @@ def main(*argv):
     for args in sys.argv:
         if (position != 0):
             print("{}: {}".format(position, args))
-        position += 1        
+        position += 1
 if __name__ == "__main__":
     main()
