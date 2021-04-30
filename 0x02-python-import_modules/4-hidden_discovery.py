@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import hidden_4
+
+
 def main():
     l = dir(hidden_4)
     for i in range(len(l)):
