@@ -7,6 +7,6 @@ def main(*argv):
        for args in sys.argv:
             if args != sys.argv[0]:
                 sum = sum + int(args)
-    print(sum, end = "")
+    print(sum)
 if __name__ == "__main__":
     main()
