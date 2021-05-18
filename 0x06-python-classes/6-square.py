@@ -33,7 +33,8 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    @property.setter
+        
+    @position.setter
     def position(self, value):
         """setter def"""
         if type(value) is not tuple:
@@ -46,6 +47,7 @@ class Square:
             raise TypeError('position must be a tuple of 2 positive integers')
         else:
             self.__position = value
+            
     def my_print(self):
         if self.__size == 0:
             print()
