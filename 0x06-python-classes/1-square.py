@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" defines a square with size"""
+""" python3 -c 'print(__import__("my_module").Square.init)"""
 
 
 class Square:
+    """ python3 -c 'print(__import__("0-square").Square)'"""
     __size = 0
     def __init__(self, size=0):
         """Initialize class."""
