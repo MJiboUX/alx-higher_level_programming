@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-""" defines a square with size"""
+""" defines a square"""
 
 
 class Square:
-    __size = 0
-    def __init__(self, size=0):
-        """Initialize class."""
-        if size is not 0:
-            self.__size = new_size 
+    """Square Class"""
+    def __init__(self, size):
+        """Initialize class"""
         self.__size = size
