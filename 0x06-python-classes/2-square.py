@@ -3,12 +3,14 @@
 
 
 class Square:
-    """Square Class
+    """ Square Class
+    
         Attributes:
             size (int): size of square
     """
     def __init__(self, size=0):
         """Initialize method
+        
             Args:
                 size (int): integer for square size
             Raises:
