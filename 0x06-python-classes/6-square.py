@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+""" defines a square with size """
+
+
 class Square:
+    """ defines a square with size  
+        Attributes:
+            size (int): size of square
+            position (int): positon to locate
+    """
     __size = 0
     __position = (0,0)
     def __init__(self, size=0, position=(0, 0)):
@@ -49,6 +57,7 @@ class Square:
             self.__position = value
             
     def my_print(self):
+        """ defines a method """
         if self.__size == 0:
             print()
         else:
