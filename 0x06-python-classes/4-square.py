@@ -3,10 +3,7 @@
 
 
 class Square:
-    """ defines a square with size  
-        Attributes:
-        size (int): size of square
-    """
+    """ creates a square with size """
     __size = 0
     def __init__(self, size=0):
         if not isinstance(size, int):
