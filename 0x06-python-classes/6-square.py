@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-""" defines a square with size """
+""" Square operation """
 
 
 class Square:
-    """ defines a square with size  
+    """ square class defined
+    
         Attributes:
             size (int): size of square
-            position (int): positon to locate
     """
     __size = 0
     __position = (0,0)
+
     def __init__(self, size=0, position=(0, 0)):
         """Initialize class."""
         if not isinstance(size, int):
@@ -17,12 +18,7 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-        self.__position = position
-        
-    @property
-    def position(self):
-        """getter def"""
-        return self.__position
+        self.__position = position 
 
     def area(self):
         """Square area."""
@@ -41,27 +37,37 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-        
+
+    @property
+    def position(self):
+        """getter def"""
+        return self.__position
+
     @position.setter
     def position(self, value):
-        """setter def"""
+        """ setter def
+            Args:
+                value (tuple): position
+            Returns:
+                None
+        """
         if type(value) is not tuple:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
-        elif type(value[0]) != int or type(value[1]) != int:
+        elif len(value) is not 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        elif type(value[0]) is not int or type(value[1]) is not int:
             raise TypeError('position must be a tuple of 2 positive integers')
         elif value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
         else:
             self.__position = value
-            
+
     def my_print(self):
-        """ defines a method """
+        """print def"""
         if self.__size == 0:
             print()
-        else:
-            print('\n'*self.__position[1], end='')
-            for i in range(0, self.__size):
-                print(' '*self.__position[0], end='')
-                print('#'*self.__size)
+            return
+        for i in range(self.__position[1]):
+            print()
+        for i in range(self.__size):
+            print ("{}{}".format(" " * self.__position[0], '#' * self.__size))
