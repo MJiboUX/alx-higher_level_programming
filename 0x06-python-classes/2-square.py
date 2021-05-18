@@ -7,7 +7,6 @@ class Square:
         Attributes:
             size (int): size of square
     """
-    __size = 0
     def __init__(self, size=0):
         """Initialize method
             Args:
