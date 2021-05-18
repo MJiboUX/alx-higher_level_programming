@@ -20,10 +20,20 @@ class Square:
         """getter def"""
         return self.__size
       
-    @property
+    @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
         elif size < 0:
              raise ValueError('size must be >= 0')
         self.__size = size
+        
+    def my_print(self):
+        """print def"""
+        if self.__size == 0:
+            print('')
+        else:
+            for i in range(0, self.__size):
+                for i in range(0, self.__size):
+                    print('#', end='')
+                print('')
