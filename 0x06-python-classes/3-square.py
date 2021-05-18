@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-""" defines a square with size"""
+""" creates a square with size"""
 
 
 class Square:
     """ Square Class
-    
         Attributes:
-            size (int): size of square
+        size (int): size of square
     """
     __size = 0
 
@@ -18,6 +17,5 @@ class Square:
         self.__size = size
 
     def area(self):
-        """ Initialize method """
         A = self.__size * self.__size
         return (A)
