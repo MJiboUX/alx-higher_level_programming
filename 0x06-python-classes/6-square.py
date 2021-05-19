@@ -3,15 +3,15 @@
 
 
 class Square:
-    """ Square class defined 
+    """ Square class defined
         Attributes:
             size (int): Size of square
     """
     def __init__(self, size=0, position=(0, 0)):
         """initializes
         Args:
-            size (int): size 
-            postion(tuple): postion 
+            size (int): size
+            postion(tuple): postion
         Returns:
             None
         """
@@ -40,7 +40,7 @@ class Square:
         """
         Setter of size
         Args:
-            value (int): size 
+            value (int): size
         Raises
             TypeError: if size is not int
             ValueError: size less than 0
@@ -56,7 +56,7 @@ class Square:
 
     def my_print(self):
         """
-        print a square 
+        print a square
         Returns:
             None
         """
