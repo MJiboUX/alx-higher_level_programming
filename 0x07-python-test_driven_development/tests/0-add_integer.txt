@@ -1,1 +1,23 @@
+The integers addition module
+======================
 
+Import module:
+>>> add_integer = __import('0-add_integer').add_integer
+
+Function:
+======================
+write a function that adds 2 integers
+
+Operations
+-------------------
+
+a must be integers or float otherwise raise a typeerror
+    >>> add_integer('hi', 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+
+b must be integers or float otherwise raise a typeerror
+    >>> add_integer(2, 'peer')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
