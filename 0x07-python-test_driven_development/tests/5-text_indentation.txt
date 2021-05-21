@@ -9,11 +9,10 @@ Testing import
 
 
 Testing Normal Display
-    >>> text_indentation("Lorem ipsum dolor sit amet \
-Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? ")
-    Lorem ipsum dolor sit amet
-    Quonam modo?
-    Utrum igitur tibi litteram videor an totas paginas commovere?
+    >>> text_indentation("Lorem? ipsum")
+    Lorem?
+    <BLANKLINE>
+    ipsum
 
 Testing texting type
     >>> text_indentation(1)
