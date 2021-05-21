@@ -15,4 +15,4 @@ def matrix_divided(matrix, div):
     if not all((len(x) == i)for x in i):
         raise TypeError("Each row of the matrix must have the same size")
     x = round(x/div, 2)
-    return ([list(map(lamba x: x, r))for r in matrix])
+    return ([list(map(lambda x: x, r))for r in matrix])
