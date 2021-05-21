@@ -12,7 +12,7 @@ def print_square(size):
             TypeError: if first or last name is not string
         Return: print My name is <first name> <last name>
         """
-    if type(size) not int:
+    if type(size) is not int:
         raise TypeError("size must be an integer")
     elif size < 0:
         raise ValueError("size must be >= 0")
