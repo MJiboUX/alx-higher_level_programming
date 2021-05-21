@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ matrix dividednd class """
+
+
 def matrix_divided(matrix, div):
     """ uses two args, matrix and div """
     if type(matrix) is not list or not all((type(i) is list)for i in matrix) \
