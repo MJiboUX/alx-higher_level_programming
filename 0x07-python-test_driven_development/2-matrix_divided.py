@@ -2,8 +2,8 @@
 """ matrix dividednd class """
 def matrix_divided(matrix, div):
     """ uses two args, matrix and div """
-    if type(matrix) is not list or not all((type(i) is list)for i in matrix)
-        or not all((isinstance(j, (int, float))for j in i)for i in matrix)
+    if type(matrix) is not list or not all((type(i) is list)for i in matrix) \
+        or not all((isinstance(j, (int, float))for j in i)for i in matrix) \
             or len(matrix[0]) == 0:
         raise TypeError("matrix must be a matrix "
                         "(list of lists) of integers/floats")
