@@ -4,6 +4,8 @@
 
 class Rectangle:
     """Rectangle Class"""
+    number_of_instances = 0
+    
     def __init__(self, width=0, height=0):
         """ Init Method """
         self.__width = width
