@@ -49,7 +49,6 @@ class Rectangle:
 
     def __str__(self):
         """define informal print str"""
-        if self.__width == 0 and self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
-        else:
-            return (('#'*self.__width + "\n")*self.__height)[:-1]
+        return (('#'*self.__width + "\n")*self.__height)[:-1]
