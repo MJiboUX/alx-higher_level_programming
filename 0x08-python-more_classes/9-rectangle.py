@@ -88,4 +88,5 @@ class Rectangle:
         """
             equal width and height
         """
-        return cls(size, size)
+        if (self.__width == self.__height == size):
+            return cls(size, size)
