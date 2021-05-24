@@ -52,5 +52,4 @@ class Rectangle:
         if self.__width == 0 and self.__height == 0:
             return ""
         else:
-            return (('#'*self.__width + "\n")*self.__height) 
-      
+            return (('#'*self.__width + "\n")*self.__height)[:-1]
