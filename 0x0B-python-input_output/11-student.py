@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defining Student class
+Defines Student class
 """
 
 
@@ -21,6 +21,13 @@ class Student():
             retrieves a dictionary representation
             of a Student instance
         """
-        if type(attrs) is list and all([type(x) == str for x in attrs]):
-            return {k: v for k, v in self.__dict__.items() if k in attrs}
+        if type(attrs) is list and all([type(s) == str for s in attrs]):
+            return {i: j for i, j in self.__dict__.items() if i in attrs}
         return(self.__dict__)
+
+    def reload_from_json(self, json):
+        """
+            reload json object
+        """
+        for i, j in json.items():
+            self.__dict__[i] = j
