@@ -5,10 +5,10 @@ Defines pasacal triangle that create list of lists
 
 
 def pascal_triangle(n):
-        """
-            defines triangle module
-        """
-        if n <= 0:
+    """
+    defines triangle module
+    """
+    if n <= 0:
         return []
     temp = []
     l = []
