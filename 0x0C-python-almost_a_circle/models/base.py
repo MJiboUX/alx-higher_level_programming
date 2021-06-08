@@ -63,23 +63,23 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """ returns a list of instances """
-        d = []
+        """serializes"""
+        ld = []
         with open(cls.__name__ + ".csv", "w", encoding="utf-8") as f:
             if list_objs:
                 for obj in list_objs:
                     if cls.__name__ == 'Rectangle':
-                        d.append([
+                        ld.append([
                             obj.id, obj.width, obj.height, obj.x, obj.y])
                     if cls.__name__ == 'Square':
-                        d.append([obj.id, obj.size, obj.x, obj.y])
+                        ld.append([obj.id, obj.size, obj.x, obj.y])
             writer = csv.writer(f)
-            for row in d:
+            for row in ld:
                 writer.writerow(row)
 
     @classmethod
     def load_from_file_csv(cls):
-        """ deserializes """
+        """deserializes """
         try:
             with open(cls.__name__ + ".csv", "r") as f:
                 ld = []
