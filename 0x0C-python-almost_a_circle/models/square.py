@@ -18,8 +18,8 @@ class Square(Rectangle):
         """overloading __str__ method """
         return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
                                                          self.x,
-                                                        self.y,
-                                                        self.width)
+                                                         self.y,
+                                                         self.width)
 
     @property
     def size(self):
