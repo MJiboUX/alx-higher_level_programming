@@ -1,6 +1,6 @@
-#!/usr/bin/python3
+ #!/usr/bin/python3
 """ define class rectangle """
-from base import Base
+from .base import Base
 
 
 class Rectangle(Base):
@@ -38,7 +38,7 @@ class Rectangle(Base):
         """ setter """
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        elif value <= 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
 
@@ -46,8 +46,8 @@ class Rectangle(Base):
     def height(self, value):
         """ setter """
         if type(value) is not int:
-            raise TypeError("height must be an integer")
-        elif value <= 0:
+                raise TypeError("height must be an integer")
+        if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -56,63 +56,56 @@ class Rectangle(Base):
         """ setter """
         if type(value) is not int:
             raise TypeError("x must be an integer")
-        elif value <= 0:
-            raise ValueError("x must be > 0")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @y.setter
     def y(self, value):
         """ setter """
         if type(value) is not int:
-            raise TypeError("y must be an integer")
-        elif value <= 0:
-            raise ValueError("y must be > 0")
+                raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
-        """ define area """
-        return self.__width * self.height
+        """ area definer """
+        return self.__width * self.__height
 
     def display(self):
         """ define display """
-        print("\n" * self.__y, end="")
-        for x in range(self.__height):
-            print(" " * self.__x, end="")
-            print("#" * self.__width)
+        print(("\n" * self.__y) +
+              "\n".join(((" " * self.__x) + ("#" * self.__width))
+                        for i in range(self.__height)))
 
     def __str__(self):
         """  overriding the __str__ method """
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
-                                                                  self.__x,
-                                                                  self.__y,
-                                                                  self.__width,
-                                                                  self.__height)
+                                                                 self.__x,
+                                                                 self.__y,
+                                                                 self.__width,
+                                                                 self.__height)
 
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute """
-        for i in range(len(args)):
-            if i == 0:
-                self.id = args[0]
-            elif i == 1:
-                self.__width = args[1]
-            elif i == 2:
-                self.__height = args[2]
-            elif i == 3:
-                self.__x = args[3]
-            elif i == 4:
-                self.__y = args[4]
-        if not args:
-            for key, value in kwargs.items():
-                if key == 'id':
-                    self.id = value
-                if key == 'width':
-                    self.__width = value
-                if key == 'height':
-                    self.__height = value
-                if key == 'x':
-                    self.__x = value
-                if key == 'y':
-                    self.__y = value
+        i = 0
+        if args:
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.width = arg
+                if i == 2:
+                    self.height = arg
+                if i == 3:
+                    self.x = arg
+                if i == 4:
+                    self.y = arg
+                i += 1
+        else:
+            for arg in kwargs:
+                setattr(self, arg, kwargs.get(arg))
 
     def to_dictionary(self):
         """
