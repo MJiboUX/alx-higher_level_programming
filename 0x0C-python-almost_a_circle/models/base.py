@@ -63,7 +63,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """serializes"""
+        """serializes and deserializes in CSV"""
         ld = []
         with open(cls.__name__ + ".csv", "w", encoding="utf-8") as f:
             if list_objs:
@@ -79,7 +79,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """deserializes """
+        """serializes and deserializes in CSV """
         try:
             with open(cls.__name__ + ".csv", "r") as f:
                 ld = []
