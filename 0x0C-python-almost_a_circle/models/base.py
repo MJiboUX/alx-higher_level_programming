@@ -33,3 +33,9 @@ class Base:
                 for obj in list_objs:
                     d.append(obj.to_dictionary())
             f.write(cls.to_json_string(d))
+
+    def from_json_string(json_string):
+        """ returns the list of the JSON string repr """
+        if not json_string:
+            return []
+        return json.loads(json_string)
