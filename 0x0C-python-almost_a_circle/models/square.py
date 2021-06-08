@@ -14,13 +14,6 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
 
-    def __str__(self):
-        """overloading __str__ method """
-        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
-                                                         self.x,
-                                                         self.y,
-                                                         self.width)
-
     @property
     def size(self):
         """ Getter """
@@ -31,6 +24,13 @@ class Square(Rectangle):
         """ Setter """
         self.height = value
         self.width = value
+
+    def __str__(self):
+        """overloading __str__ method """
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
+                                                         self.x,
+                                                         self.y,
+                                                         self.width)
 
     def update(self, *args, **kwargs):
         """ define update """
