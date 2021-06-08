@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ new class called base """
 import json
+import csv
 
 
 class Base:
@@ -52,10 +53,41 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ returns a list of instances """
+        """ serializes """
         try:
             with open(cls.__name__ + ".json", "r") as f:
                 return [cls.create(**dictionary) for
                         dictionary in cls.from_json_string(f.read())]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ returns a list of instances """
+        d = []
+        with open(cls.__name__ + ".csv", "w", encoding="utf-8") as f:
+            if list_objs:
+                for obj in list_objs:
+                    if cls.__name__ == 'Rectangle':
+                        d.append([
+                            obj.id, obj.width, obj.height, obj.x, obj.y])
+                    if cls.__name__ == 'Square':
+                        d.append([obj.id, obj.size, obj.x, obj.y])
+            writer = csv.writer(f)
+            for row in d:
+                writer.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ deserializes """
+        try:
+            with open(cls.__name__ + ".csv", "r") as f:
+                ld = []
+                reader = csv.DictReader(f)
+                for row in reader:
+                    for key, val in row.items():
+                        row[key] = int(val)
+                ld.append(row)
+                return [cls.create(**item) for item in ld]
         except FileNotFoundError:
             return []
