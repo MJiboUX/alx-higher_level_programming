@@ -6,8 +6,8 @@ if (isNaN(op) === true) {
 } else {
   for (let i = 0; i < op; i++) {
     sp += 'X';
-    }
+  }
   for (let j = 0; j < op; j++) {
     console.log(sp);
-    }
+  }
 }
