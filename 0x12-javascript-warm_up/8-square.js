@@ -1,12 +1,13 @@
 #!/usr/bin/node
 const op = process.argv[2];
+sp = '';
 if (isNaN(op) === true) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < op; i++) {
-    console.log('X');
+    sp += 'X';
     }
   for (let j = 0; j < op; j++) {
-    console.log('X');
+    console.log(sp);
     }
 }
