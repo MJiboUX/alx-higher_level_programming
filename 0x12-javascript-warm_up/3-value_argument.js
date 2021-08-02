@@ -6,5 +6,5 @@ process.argv.forEach((val, index) => {
 if (x <= 2) {
   console.log('No argument');
 } else {
-  console.log('${val}');
+  console.log(`${val}`);
 }
