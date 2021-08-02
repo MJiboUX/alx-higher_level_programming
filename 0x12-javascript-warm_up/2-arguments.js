@@ -1,9 +1,6 @@
 #!/usr/bin/node
-import { argv } from 'process';
-argv.forEach((val) => {
-  if (val){
-  console.log(`Argument found`);
-  } else {
-  console.log(`No argument`);
-  }
-});
+function display(arg) {
+if (arg.length === 0) {
+console.log('No argument”')
+}
+}
