@@ -1,8 +1,8 @@
 #!/usr/bin/node
 function factorial (n) {
   let result = 1;
-  while (n >= 1) {
-      result = result * n;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
   }
   return (result);
 }
