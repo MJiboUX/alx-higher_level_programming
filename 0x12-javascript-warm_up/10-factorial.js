@@ -14,4 +14,5 @@ function factorial (n) {
     }
     return result;
   }
+}
 factorial(process.argv[2]);
