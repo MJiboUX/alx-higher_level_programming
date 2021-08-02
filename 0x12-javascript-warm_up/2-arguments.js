@@ -4,3 +4,4 @@ if (arg.length === 0) {
 console.log('No argument”')
 }
 }
+display();
