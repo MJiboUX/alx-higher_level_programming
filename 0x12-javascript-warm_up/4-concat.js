@@ -5,4 +5,7 @@ process.argv.forEach((val, index) => {
   if (index === 2) {
     console.log(`${val}`);
   }
+  if (index === 3) {
+    console.log('is');
+  }
 });
