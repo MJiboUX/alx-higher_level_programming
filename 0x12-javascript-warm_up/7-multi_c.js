@@ -1,5 +1,4 @@
 #!/usr/bin/node
-const x;
 const op = process.argv[2];
 if (isNaN(op) === true) {
   console.log('Missing number of occurrences');
