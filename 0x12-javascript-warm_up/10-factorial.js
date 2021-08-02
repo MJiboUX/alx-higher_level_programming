@@ -15,4 +15,4 @@ function factorial (n) {
     return result;
   }
 }
-factorial(process.argv[2]);
+console.log(factorial(parseInt(process.argv[2])));
