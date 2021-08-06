@@ -13,9 +13,9 @@ if __name__ == '__main__':
         port=3306)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM cities wHERE \
-                    state_id = (SELECT id FROM states ) \
-                    ORDER BY cities.id ASC")
+    cursor.execute("SELECT cities.id, cities.name, states.name \
+                    FROM cities INNER JOIN states \
+                    ON cities.state_id=states.id")
     for i in cursor.fetchall():
         print(i)
     cursor.close()
