@@ -10,6 +10,6 @@ sql = """SELECT * FROM states ORDERBY states.id"""
 try:
     cursor.execute(sql)
     db.commit()
-catch:
+except:
     db.rollback()
 db.close()
