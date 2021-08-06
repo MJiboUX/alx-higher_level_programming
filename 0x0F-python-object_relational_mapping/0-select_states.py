@@ -12,7 +12,7 @@ if __name__ == '__main__':
         host="localhost",
         port=3306)
 
-    cursor = mysql_c.cursor()
+    cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC;")
     for row in cursor.fetchall():
         print(row)
