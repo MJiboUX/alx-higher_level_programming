@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     que = session().query(State).first()
     if que:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(que.id, que.name))
     else:
         print("Nothing")
     session().close()
