@@ -1,14 +1,19 @@
 #!/usr/bin/python
-# script that lists all states from the database hbtn_0e_0_usa
-from MySQLdb import _mysql
+""" lists all states from the database """
+import MySQLdb
+import sys
 
-
-db = _mysql.connect(user="alx",passwd="1234",db="hbtn_0e_0_usa")
+if __name__ == '__main__':
+db = _mysql.connect(
+    user=sys.argv[1],
+    passwd=sys.argv[2],
+    db=sys.argv[3],
+    host="localhost",
+    port=3306)
 cursor = db.cursor()
-sql = """SELECT * FROM states ORDERBY states.id"""
-try:
-    cursor.execute(sql)
-    db.commit()
-except:
-    db.rollback()
+sql = """SELECT * FROM states ORDER BY states.id ASC"""
+cursor.execute(sql)
+for row in cursor.fetchall():
+    print(row)
+cursor.close()
 db.close()
