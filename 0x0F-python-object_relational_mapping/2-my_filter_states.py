@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Script takes an argument and displays values """
 import MYSQLdb
 import sys
 
