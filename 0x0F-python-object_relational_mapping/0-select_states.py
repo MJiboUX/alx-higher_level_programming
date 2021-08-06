@@ -1,14 +1,14 @@
 #!/usr/bin/python
--- Create states table in hbtn_0e_0_usa with some data
+# script that lists all states from the database hbtn_0e_0_usa
 import MySQLdb
 from MySQLdb import _mysql
 
 
 db = _mysql.connect(user="alx",passwd="1234",db="hbtn_0e_0_usa")
 cursor = db.cursor()
-sql = SELECT * FROM states ORDERBY states.id;
+sql = SELECT * FROM states ORDERBY states.id
 try:
-    cursor.execute(sql);
+    cursor.execute(sql)
     db.commit()
 catch:
     db.rollback()
