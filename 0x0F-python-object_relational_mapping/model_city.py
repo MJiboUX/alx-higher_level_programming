@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-""" python file that contains the class definition of a State"""
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+""" Class definition of State. Instance Base = declarative_base() """
+from sqlalchemy import Column, Integer, String, ForeignKey
+from model_state import Base, State
+from sqlalchemy.orm import relationship
 
 
 class City(Base):
-    """ base city class """
+    """City class"""
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True, unique=True,
-                nullable=False, autoincrement=True)
+                autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
