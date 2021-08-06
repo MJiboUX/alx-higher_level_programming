@@ -3,6 +3,7 @@ import MYSQLdb
 import sys
 
 if __name__ == '__main__':
+
     db = MYSQLdb.connect(
         user=sys.argv[1],
         password=sys.argv[2],
