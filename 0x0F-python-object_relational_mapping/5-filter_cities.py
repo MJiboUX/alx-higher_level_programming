@@ -21,7 +21,7 @@ if __name__ == '__main__':
     sp = ""
     ar = list(r[0] for r in row)
     for i in row:
-        sp = sp + i[0] + ", "
+        sp = sp + i[0]
     print(sp[0: -2:])
     cursor.close()
     db.close()
