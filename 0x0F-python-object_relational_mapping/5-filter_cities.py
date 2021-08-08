@@ -17,7 +17,11 @@ if __name__ == '__main__':
                     INNER JOIN states ON \
                     cities.state_id=states.id \
                     WHERE states.name=%s", (sys.argv[4],))
-    for i in cursor.fetch_row():
-        print(i)
+    row = cursor.fetchall()
+    sp = ""
+    ar = list(r[0] for r in row)
+    for i in row:
+        sp = sp + i[0] + ", "
+    print(sp[0: -2:])
     cursor.close()
-    db.cursor()
+    db.close()
