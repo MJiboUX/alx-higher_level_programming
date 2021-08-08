@@ -17,7 +17,7 @@ if __name__ == '__main__':
                     INNER JOIN states ON \
                     cities.state_id=states.id \
                     WHERE states.name=%s", (sys.argv[4],))
-    for i in cursor.fetchone():
+    for i in cursor.fetch_row():
         print(i)
     cursor.close()
     db.cursor()
