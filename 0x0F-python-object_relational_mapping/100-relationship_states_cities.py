@@ -1,18 +1,13 @@
 #!/usr/bin/python3
 """
-Write a python file that contains the class
-definition of a State
+creates the State “California” with the City “San Francisco”
+from the database hbtn_0e_100_usa
 """
-import sqlalchemy
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State
 from relationship_city import City
-Base = declarative_base()
 
 
 if __name__ == "__main__":
