@@ -10,6 +10,8 @@ from sqlalchemy.orm import relationship
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from relationship_state import Base, State
+from relationship_city import City
 Base = declarative_base()
 
 
