@@ -3,4 +3,4 @@
 # displays the size of the body of the response
 # The size is displayed in bytes
 # used curl
-curl -sI $1 | grep Content-Length: | cut -d ' ' -f2
+curl -sI "$1" | grep 'Content-Length:' | cut -c 17-
