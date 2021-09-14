@@ -5,5 +5,5 @@ const fs = require('fs');
 const url = process.argv[2];
 const Fname = process.argv[3];
 req
-.get(url)
-.pipe(fs.createWriteStream(Fname));
+  .get(url)
+  .pipe(fs.createWriteStream(Fname));
