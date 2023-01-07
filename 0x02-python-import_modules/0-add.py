@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    from add_0 import add
-    a = 1
-    b = 2
-    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+# This program adds two numbers
+
+a = 1
+b = 2
+
+# Add two numbers
+sum = a + b
+
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(a, b, sum))
