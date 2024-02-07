@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-str = "Holberton School"
+str = "Best School"
 print("{}{}{}\n{:.9}".format(str, str, str, str))
